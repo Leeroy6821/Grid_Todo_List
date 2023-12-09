@@ -3,9 +3,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.1'
+ruby '2.7.5'
 
-gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
+gem 'rails', '~> 6.1.6'
 # Use Puma as the app server
 gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
@@ -28,7 +28,7 @@ gem 'acts_as_list'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 # Admin
-gem 'administrate', github: 'excid3/administrate', branch: 'jumpstart'
+gem 'administrate'
 # rubocop fix your syntax
 gem 'rubocop-rails', '~> 2.9', '>= 2.9.1'
 # SimpleCov
@@ -36,6 +36,7 @@ gem 'simplecov', require: false, group: :test
 # Erros
 gem 'friendly_id', '~> 5.1'
 
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 group :production do
   gem 'pg'
 end
@@ -68,3 +69,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+
